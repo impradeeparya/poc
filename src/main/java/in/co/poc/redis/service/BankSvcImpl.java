@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import in.co.poc.redis.model.Bank;
 import in.co.poc.redis.repository.RedisRepository;
+import in.co.poc.utils.Parser;
 
 @Service
 public class BankSvcImpl implements BankSvc {
@@ -28,6 +29,6 @@ public class BankSvcImpl implements BankSvc {
 
   @Override
   public Bank fetchByIfsc(String ifsc) {
-    return (Bank) redisRepository.fetchById(BANK_KEY, ifsc);
+    return Parser.fromJson(redisRepository.fetchById(BANK_KEY, ifsc).toString(), Bank.class);
   }
 }
