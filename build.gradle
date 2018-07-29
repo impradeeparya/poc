@@ -39,4 +39,5 @@ dependencies {
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
 	compile group: 'org.springframework.kafka', name: 'spring-kafka', version: '2.1.7.RELEASE'
+	compile 'org.springframework.boot:spring-boot-starter-data-cassandra:2.0.0.M3'
 }
