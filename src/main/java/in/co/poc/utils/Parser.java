@@ -9,4 +9,8 @@ public class Parser {
   public static <T> T fromJson(String json, Class<T> classType) {
     return gson.fromJson(json, classType);
   }
+
+  public static String toJson(Object o) {
+    return gson.toJson(o);
+  }
 }

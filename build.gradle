@@ -40,4 +40,10 @@ dependencies {
 	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
 	compile group: 'org.springframework.kafka', name: 'spring-kafka', version: '2.1.7.RELEASE'
 	compile 'org.springframework.boot:spring-boot-starter-data-cassandra:2.0.0.M3'
+	compile 'com.deliveredtechnologies:rulebook-core:0.10'
+	compile 'org.jeasy:easy-rules-core:3.0.0'
+	compile 'org.springframework.boot:spring-boot-starter-activemq'
+	compile ('org.apache.activemq:activemq-spring:5.13.3'){
+		exclude module : 'org.apache.geronimo.specs:geronimo-jta_1.0.1B_spec'
+	}
 }
